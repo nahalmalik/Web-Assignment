@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment</title>
+  <!-- <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 20px;
+        }
+
+        #result {
+            font-weight: bold;
+            margin-top: 10px;
+        }
+    </style>--> 
+</head>
+<body>
+
+    <h1>Name: Nahal Binte Imran</h1>
+    <h1>Reg # SU-21-01-002-029</h1>
+    <h1>Course: Web Design and development</h1>
+<hr>
+    <h2>1.Area of Rectangle</h2>
+        <label for="rectLength">Rectangle Length:</label>
+        <input type="number" id="rectLength" required>
+<br><br>
+        <label for="rectWidth">Rectangle Width:</label>
+        <input type="number" id="rectWidth" required>
+<br><br>
+        <button type="button" onclick="calculateRectangleArea()">Calculate Area</button>
+        <br>
+        <br>
+        <div id="geometryResult"></div><hr>
+        <h2>2.Area of Circle </h2>
+    
+        <label for="circleRadius">Circle Radius:</label>
+        <input type="number" id="circleRadius" required>
+        <button type="button" onclick="calculateCircleArea()">Calculate Circle Area</button><br>
+    <div id="circleResult"></div>
+<hr>
+    <h2>3.Volume of a Box</h2>
+        <label for="boxLength">Box Length:</label>
+        <input type="number" id="boxLength" required>
+    <br><br>
+        <label for="boxWidth">Box Width:</label>
+        <input type="number" id="boxWidth" required>
+        <br><br>
+        <label for="boxHeight">Box Height:</label>
+        <input type="number" id="boxHeight" required>
+        <br><br>
+        <button type="button" onclick="calculateBoxVolume()">Calculate Box Volume</button>
+
+        <br><br>
+        <div id="volumeResult"></div><hr>
+        <h2>4.Volume of a Cylinder</h2>
+        <label for="cylinderRadius">Cylinder Radius:</label>
+        <input type="number" id="cylinderRadius" required>
+<br><br>
+        <label for="cylinderHeight">Cylinder Height:</label>
+        <input type="number" id="cylinderHeight" required>
+
+        <button type="button" onclick="calculateCylinderVolume()">Calculate Cylinder Volume</button>
+        <br><br>
+
+    <div id="cylinderResult"></div>
+<hr>
+    <h2>5.Dollar to Rupee</h2>
+        <label for="dollarAmount">Dollars:</label>
+        <input type="number" id="dollarAmount" required>
+
+        <button type="button" onclick="convertDollarToRupees()">Convert to Rupees</button><br><br>
+<div id="dollarResult"></div><hr>
+        <br>
+        <h2>6.Rupee to Rial</h2>
+        <label for="rupeeAmount">Rupees:</label>
+        <input type="number" id="rupeeAmount" required>
+
+        <button type="button" onclick="convertRupeesToRial()">Convert to Rial</button>
+        <br><br>
+        <div id="rupeeResult"></div><hr>
+        <h2>7.Pounds to Dollar</h2>
+        <label for="poundAmount">Pounds:</label>
+        <input type="number" id="poundAmount" required>
+
+        <button type="button" onclick="convertPoundsToDollars()">Convert to Dollars</button>
+<br><br>
+    <div id="currencyResult"></div>
+<hr><hr>
+    <script>
+//area of rectangle
+        function calculateRectangleArea() {
+            var rectLength = document.getElementById('rectLength').value;
+            var rectWidth = document.getElementById('rectWidth').value;
+            var area = rectLength * rectWidth;
+            document.getElementById('geometryResult').innerHTML = "Rectangle Area: " + area;
+        }
+//area of circle
+        function calculateCircleArea() {
+            var circleRadius = document.getElementById('circleRadius').value;
+            var area = Math.PI * Math.pow(circleRadius, 2);
+            document.getElementById('circleResult').innerHTML = "Circle Area: " + area.toFixed(2);
+        }
+//Volume of box
+        function calculateBoxVolume() {
+            var boxLength = document.getElementById('boxLength').value;
+            var boxWidth = document.getElementById('boxWidth').value;
+            var boxHeight = document.getElementById('boxHeight').value;
+            var volume = boxLength * boxWidth * boxHeight;
+            document.getElementById('volumeResult').innerHTML = "Box Volume: " + volume;
+        }
+//Volume of cylinder
+        function calculateCylinderVolume() {
+            var cylinderRadius = document.getElementById('cylinderRadius').value;
+            var cylinderHeight = document.getElementById('cylinderHeight').value;
+            var volume = Math.PI * Math.pow(cylinderRadius, 2) * cylinderHeight;
+            document.getElementById('cylinderResult').innerHTML = "Cylinder Volume: " + volume.toFixed(2);
+        }
+//dollar to rupee
+        function convertDollarToRupees() {
+            var dollarAmount = document.getElementById('dollarAmount').value;
+            var rupeeAmount = dollarAmount * 74.5; // Conversion rate (example)
+            document.getElementById('dollarResult').innerHTML = "Rupees: " + rupeeAmount.toFixed(2);
+        }
+//rupee to rial
+        function convertRupeesToRial() {
+            var rupeeAmount = document.getElementById('rupeeAmount').value;
+            var rialAmount = rupeeAmount * 4500; // Conversion rate (example)
+            document.getElementById('rupeeResult').innerHTML = "Rial: " + rialAmount.toFixed(2);
+        }
+//pounds to dollar
+        function convertPoundsToDollars() {
+            var poundAmount = document.getElementById('poundAmount').value;
+            var dollarAmount = poundAmount * 1.33; // Conversion rate (example)
+            document.getElementById('currencyResult').innerHTML = "Dollars: " + dollarAmount.toFixed(2);
+        }
+    </script>
+
+</body>
+</html>
